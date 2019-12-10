@@ -6,8 +6,8 @@ module.exports = {
     
     getAccessToken: function(cb) {
       var path = '/gettoken?' + querystring.stringify({
-        corpid: env.corpId,
-        corpsecret: env.secret
+        appkey: env.key,
+        appsecret: env.secret
       });
       httpUtil.get(path, cb);
     },
